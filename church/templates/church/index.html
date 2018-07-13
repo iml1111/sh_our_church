@@ -1,0 +1,14 @@
+{% if list %}
+    <ul>
+    {% for c in list %}
+        <li><strong>{{c.title}}</strong><br>
+        	<img src= "{{c.img.url}}"width=200>
+        	<br>
+        	{{c.post}}<br>
+        	{{c.pub_date}}<br>
+        </li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No post are available.</p>
+{% endif %}
