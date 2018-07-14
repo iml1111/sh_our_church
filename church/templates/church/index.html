@@ -2,8 +2,9 @@
     <ul>
     {% for c in list %}
         <li><strong>{{c.title}}</strong><br>
+            {% if c.img %}
         	<img src= "{{c.img.url}}"width=200>
-        	<br>
+            {% endif %}
         	{{c.post}}<br>
         	{{c.pub_date}}<br>
         </li>

@@ -4,8 +4,8 @@ import datetime
 
 class Post(models.Model):
     title = models.CharField(max_length=50)
-    img = models.ImageField(upload_to='images')
-    post = models.CharField(max_length=500)
+    img = models.ImageField(upload_to='images',blank=True)
+    email = models.EmailField(max_length=254,)
     pub_date = models.DateTimeField('date published')
     #DateField('Career_Date')
     #IntegerField(default=0) 
