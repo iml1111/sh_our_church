@@ -15,7 +15,7 @@ def index(request):
 	except Post.DoesNotExist:
 		raise Http404("Post Not Found")	
 	context = {'list': list}
-	return render(request, 'church/index.html', context)
+	return render(request, 'index.html', context)
 
 def detail(request, question_id):
     return HttpResponse("You're looking at post %s." % question_id)
@@ -33,4 +33,4 @@ def create(request):
         	return HttpResponseRedirect('/')
     else:
         form = PostForm()
-    return render(request, 'church/form.html', {'form': form})
+    return render(request, 'form.html', {'form': form})

@@ -1,15 +1,24 @@
+{% extends 'tmp.html' %}
+{% block asd %}
+
 {% if list %}
     <ul>
     {% for c in list %}
         <li><strong>{{c.title}}</strong><br>
             {% if c.img %}
-        	<img src= "{{c.img.url}}"width=200>
+            <img src= "{{c.img.url}}"width=200>
             {% endif %}
-        	{{c.post}}<br>
-        	{{c.pub_date}}<br>
+            {{c.post}}<br>
+            {{c.pub_date}}<br>
         </li>
     {% endfor %}
     </ul>
 {% else %}
     <p>No post are available.</p>
 {% endif %}
+
+{% endblock %}
+
+
+
+
